@@ -23,9 +23,9 @@ public class Main {
 				2	
 		);
 
-		cluster3.setCluster_leader("Mat Damon");
-		cluster3.setPerformance_time_in_hours(6);
-		cluster3.setAddress_of_conducting("Ukrainku");
+		cluster3.setClusterLeader("Mat Damon");
+		cluster3.setPerformanceTimeInHours(6);
+		cluster3.setAddressOfConducting("Ukrainku");
 
 		System.out.println(cluster1.toString() + '\n');
 		System.out.println(cluster2.toString() + '\n');

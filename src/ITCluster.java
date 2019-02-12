@@ -1,53 +1,52 @@
 
 
 public class ITCluster {
-
-    private String city ;
+    private String city;
     private String country ;
-    private int number_of_participants ;
-    private int number_of_speakers ;
-    private String cluster_leader ;
-    protected int performance_time_in_hours;
-    protected String address_of_conducting ;
-    static int ticket_price_in_dollars = 12;
+    private int numberOfParticipants;
+    private int numberOfSpeakers;
+    private String clusterLeader;
+    
+    protected int performanceTimeInHours;
+    protected String addressOfConducting;
+    
+    static int ticketPriceInDollars = 12;
 
     ITCluster() {
 
         this.city = "Lviv";
         this.country = "Ukraine" ;
-        this.number_of_participants = 5000 ;
-        this.number_of_speakers = 13 ;
-        this.cluster_leader = "Anton Shikhmat" ;
-        this.performance_time_in_hours = 3 ;
-        this.address_of_conducting = "Sadovoa" ;
+        this.numberOfParticipants = 5000 ;
+        this.numberOfSpeakers = 13 ;
+        this.clusterLeader = "Anton Shikhmat" ;
+        this.performanceTimeInHours = 3 ;
+        this.addressOfConducting = "Sadovoa" ;
     }
 
     ITCluster(
-            String city,
-            String country,
-            int number_of_participants,
-            int number_of_speakers
+        String city,
+        String country,
+        int numberOfParticipants,
+        int numberOfSpeakers
     ) {
         this.city = city ;
         this.country = country ;
-        this.number_of_participants = number_of_participants ;
-        this.number_of_speakers = number_of_speakers ;
+        this.numberOfParticipants = numberOfParticipants ;
+        this.numberOfSpeakers = numberOfSpeakers ;
     }
 
     public ITCluster(String city,
                      String country,
-                     int number_of_participants,
-                     int number_of_speakers,
-                     String cluster_leader,
-                     int performance_time_in_hours,
-                     String address_of_conducting) {
-        this.city = city;
-        this.country = country;
-        this.number_of_participants = number_of_participants;
-        this.number_of_speakers = number_of_speakers;
-        this.cluster_leader = cluster_leader;
-        this.performance_time_in_hours = performance_time_in_hours;
-        this.address_of_conducting = address_of_conducting;
+                     int numberOfParticipants,
+                     int numberOfSpeakers,
+                     String clusterLeader,
+                     int performanceTimeInHours,
+                     String addressOfConducting) {
+        this(city, country, numberOfParticipants, numberOfSpeakers);
+        
+        this.clusterLeader = clusterLeader;
+        this.performanceTimeInHours = performanceTimeInHours;
+        this.addressOfConducting = addressOfConducting;
     }
 
     public String getCity() {
@@ -66,80 +65,80 @@ public class ITCluster {
         this.country = country;
     }
 
-    public int getNumber_of_participants() {
-        return number_of_participants;
+    public int getNumberOfParticipants() {
+        return numberOfParticipants;
     }
 
-    public void setNumber_of_participants(int number_of_participants) {
-        this.number_of_participants = number_of_participants;
+    public void setNumberOfParticipants(int numberOfParticipants) {
+        this.numberOfParticipants = numberOfParticipants;
     }
 
-    public int getNumber_of_speakers() {
-        return number_of_speakers;
+    public int getNumberOfSpeakers() {
+        return numberOfSpeakers;
     }
 
-    public void setNumber_of_speakers(int number_of_speakers) {
-        this.number_of_speakers = number_of_speakers;
+    public void setNumberOfSpeakers(int numberOfSpeakers) {
+        this.numberOfSpeakers = numberOfSpeakers;
     }
 
-    public String getCluster_leader() {
-        return cluster_leader;
+    public String getClusterLeader() {
+        return clusterLeader;
     }
 
-    public void setCluster_leader(String cluster_leader) {
-        this.cluster_leader = cluster_leader;
+    public void setClusterLeader(String clusterLeader) {
+        this.clusterLeader = clusterLeader;
     }
 
-    public int getPerformance_time_in_hours() {
-        return performance_time_in_hours;
+    public int getPerformanceTimeInHours() {
+        return performanceTimeInHours;
     }
 
-    public void setPerformance_time_in_hours(int performance_time_in_hours) {
-        this.performance_time_in_hours = performance_time_in_hours;
+    public void setPerformanceTimeInHours(int performanceTimeInHours) {
+        this.performanceTimeInHours = performanceTimeInHours;
     }
 
-    public String getAddress_of_conducting() {
-        return address_of_conducting;
+    public String getAddressOfConducting() {
+        return addressOfConducting;
     }
 
-    public void setAddress_of_conducting(String address_of_conducting) {
-        this.address_of_conducting = address_of_conducting;
+    public void setAddressOfConducting(String addressOfConducting) {
+        this.addressOfConducting = addressOfConducting;
     }
 
     public String toString() {
         return "ITCluster{" + '\n' +
                 "city=" + city + '\n' +
                 "country=" + country + '\n' +
-                "number_of_participants=" + number_of_participants + '\n' +
-                "number_of_speakers=" + number_of_speakers + '\n' +
-                "cluster_leader=" + cluster_leader + '\n' +
-                "performance_time_in_hours=" + performance_time_in_hours + '\n' +
-                "address_of_conducting='" + address_of_conducting + '\n' +
+                "numberOfParticipants=" + numberOfParticipants + '\n' +
+                "numberOfSpeakers=" + numberOfSpeakers + '\n' +
+                "clusterLeader=" + clusterLeader + '\n' +
+                "performanceTimeInHours=" + performanceTimeInHours + '\n' +
+                "addressOfConducting='" + addressOfConducting + '\n' +
                 '}';
     }
     
     static void printStaticTicketPriceInDollars() {
-		System.out.println("TickePriceInDollarst " + ticket_price_in_dollars);
+		System.out.println("TickePriceInDollarst " + ticketPriceInDollars);
 	}
 
 	public void printTicketPriceInDollars() {
-		System.out.println("TickePriceInDollarst " + ticket_price_in_dollars);
+		System.out.println("TickePriceInDollarst " + ticketPriceInDollars);
 	}
 
 	public void resetValues(String city,
             String country,
-            int number_of_participants,
-            int number_of_speakers,
-            String cluster_leader,
-            int performance_time_in_hours,
-            String address_of_conducting) 
+            int numberOfParticipants,
+            int numberOfSpeakers,
+            String clusterLeader,
+            int performanceTimeInHours,
+            String addressOfConducting) 
 	{
 		this.city = city;
         this.country = country;
-        this.number_of_participants = number_of_participants;
-        this.number_of_speakers = number_of_speakers;
-        this.cluster_leader = cluster_leader;
-        this.performance_time_in_hours = performance_time_in_hours;
-        this.address_of_conducting = address_of_conducting;
+        this.numberOfParticipants = numberOfParticipants;
+        this.numberOfSpeakers = numberOfSpeakers;
+        this.clusterLeader = clusterLeader;
+        this.performanceTimeInHours = performanceTimeInHours;
+        this.addressOfConducting = addressOfConducting;
 	}
 } 
